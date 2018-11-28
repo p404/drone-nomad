@@ -6,10 +6,10 @@ RUN apk add --no-cache \
         musl-dev \
     && git clone https://github.com/hashicorp/nomad \
     && cd nomad \
-    && git checkout v0.6.3 \
+    && git checkout v0.8.2 \
     && go install .
 
-WORKDIR /go/src/github.com/publysher/drone-nomad
+WORKDIR /go/src/github.com/p404/drone-nomad
 COPY . ./
 RUN go install .
 
